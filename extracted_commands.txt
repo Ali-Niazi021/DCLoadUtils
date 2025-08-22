@@ -1,0 +1,163 @@
+SCPI COMMANDS FOUND IN DL3000 MANUALS
+========================================
+
+*CLS
+*CLS ................................................................................................................................. 2-2
+*CLS command to clear the register.
+*ESE
+*ESE ................................................................................................................................. 2-3
+*ESE?
+*ESE? /*Queries the bit enabled in the enable register part of the current standard
+*ESR?
+*ESR? ............................................................................................................................... 2-4
+*IDN?
+*IDN? ............................................................................................................................... 2-4
+*IDN? in the Command field. Click Write to write the command to the instrument. If it is a query
+*OPC
+*OPC ................................................................................................................................. 2-5
+*OPC?
+*OPC? /*Queries whether the current operation is finished. The command returns 1.*/
+*OPT?
+*OPT? ............................................................................................................................... 2-5
+*PSC
+*PSC ................................................................................................................................. 2-6
+*PSC command (*PSC 1) to clear the enable register part of the status byte register
+*PSC?
+*PSC? /*Queries whether to enable or disable the power-on clearing of the affected
+*RST
+*RST ................................................................................................................................. 2-6
+*SRE
+*SRE ................................................................................................................................. 2-7
+*SRE?
+*SRE? /*Queries the bit enabled in the enable register part of the status byte
+*STB?
+*STB? ............................................................................................................................... 2-7
+*TRG
+*TRG ................................................................................................................................ 2-8
+*TST?
+*TST? ............................................................................................................................... 2-8
+*WAI
+*WAI ................................................................................................................................. 2-8
+:LIC Command
+:LIC Command ....................................................................................................................... 2-44
+:LXI Commands
+:LXI Commands ...................................................................................................................... 2-42
+:MEASure commands and :FETCh commands
+:MEASure commands and :FETCh commands ........................................................................... 2-13
+:STATus Commands
+:STATus Commands .................................................................................................................. 2-9
+:SYSTem Commands
+:SYSTem Commands ............................................................................................................... 2-40
+:TRIGger Commands
+:TRIGger Commands ............................................................................................................... 2-17
+:[SOURce] Commands
+:[SOURce] Commands ............................................................................................................. 2-18
+A
+AC Input Power AC Selector
+AC Selector ...................... 1-10, 1-13 Local Operation Mode ................. 2-2
+B
+BUS: When the load receives the remote triggering command (:TRIGger) via the
+CAUTION
+CAUTION It calls attention to an operation, if not correctly performed, could
+CC
+CC Continuous Mode (Con)
+CC Continuous Mode (Con) ............................................................. 2-18
+CC Pulsed Mode (Pul)
+CC Pulsed Mode (Pul) ..................................................................... 2-25
+CC Toggled Mode (Tog)
+CC Toggled Mode (Tog) .................................................................. 2-32
+CP
+CR
+CV
+Command List:
+DANGER It calls attention to an operation, if not correctly performed, could
+DHCP ON
+DHCP:ON
+DUT
+Function realized in this example: sending the *IDN? command and reading the instrument
+GPIB Address ........................... 2-97 System Utility Function .............. 2-92
+GPIB Address 2
+I
+II DL3000 Programming Guide
+II DL3000 User Guide
+III Load Current
+IP Address ............................. 2-102 Tog .......................................... 2-32
+IP Address 192.16.3.3 192.16.3.8
+IP Configuration...................... 2-101 VISA ...................................... 2-104
+IV DL3000 Programming Guide
+IV DL3000 User Guide
+LAN
+LAN Interface LAN-DL3
+LIST Function
+LIST Function ........................................................................................................................... 3-1
+MATLAB Programming Instance
+MATLAB Programming Instance ................................................................................................. 4-6
+Method 3: Send SCPI Commands
+Note: The RS232 protocol command ends with "\r\n" for the DL3000 series.
+OCP
+OCP Test Function
+OCP Test Function .......................................................................... 2-45
+OPP
+OPP Test Function
+OPP Test Function .......................................................................... 2-53
+P Load Power
+RIGOL
+RIGOL Chapter 1 Programming Overview
+RIGOL Chapter 1 Quick Start
+RIGOL Chapter 2 Command System
+RIGOL Chapter 2 Front Panel Operations
+RIGOL Chapter 3 Application Instances
+RIGOL Chapter 3 Remote Control
+RIGOL Chapter 4 Programming Instances
+RIGOL Chapter 4 Troubleshooting
+RIGOL Chapter 5 Appendix
+RIGOL Contents
+RIGOL TECHNOLOGIES CO., LTD.
+RIGOL TECHNOLOGIES CO., LTD. (hereinafter referred to as RIGOL) warrants that
+RIGOL TECHNOLOGIES, INC.
+RIGOL TECHNOLOGIES, INC. (hereinafter referred to as RIGOL) warrants that the product will be free
+RIGOL TECHNOLOGIES,DL3031A,LS000001,00.01.00.04.05
+RIGOL Ultra Sigma is recommended. You can download the software from RIGOL
+SCPI Command Overview
+SCPI Command Overview .......................................................................................................... 1-4
+SCPI Status Register
+SCPI Status Register ................................................................................................................. 1-6
+SHORT HOLD
+T
+TRIG TRIG
+TTTRRRIIIGGG
+TWD TWD
+The :LIC command is used to install the option, and it is applicable to DL3021 and DL3031. If you need any
+USB Device
+USB Host
+V
+VI DL3000 User Guide
+VIII DL3000 User Guide
+VVV
+WARNING
+WARNING It calls attention to an operation, if not correctly performed, could
+When the load receives the remote triggering command (:TRIG:IMM) via the
+X DL3000 User’s Guide
+command :LIC:SET <license>, refer to "Remote Control".
+command syntax. For example, :SYSTem:ERRor? can be abbreviated as :SYST:ERR?
+command, it returns 20 (based on the formula: 22 + 24 = 20).
+command. LIST: indicates that the input regulation mode is determined by the
+communicate with the PC. Note: The RS232 protocol command ends with "\r\n" for the DL3000 series.
+effects as the :MEASure[:VOLTage][:DC]? command.
+register to the status byte register. The :STATus:PRESet command will clear all bits in the enable register,
+remain set and will not be cleared until cleared by running a query command (e.g. the *ESR? command) or
+the :DEBug:KEY {0|1|ON|OFF} command to disable the virtual panel (when the
+the :LIC:SET <sn> command must be sent in the form of :LIC:SET
+the :STATus:OPERation:ENABle command).
+the :STATus:QUEStionable[:EVENt]? command to read the register. The definitions for the bits in the
+to the :STATus:QUEStionable:ENABle command).
+waveform display command. BATTery: indicates that the input regulation mode is
+ Sending the query command *OPC? and reading the results can ensure that all the
+ When you use the virtual panel, first run the :DEBug:KEY {0|1|ON|OFF} command
+ :LIC Command
+ :LXI Commands
+ :MEASure commands and :FETCh commands
+ :STATus Commands
+ :SYSTem Commands
+ :TRIGger Commands
+ :[SOURce] Commands
